@@ -1,0 +1,40 @@
+{
+	"name": "ds_blbsa",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_blbsa",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "srccon"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "YearPassed",
+				"type": "String"
+			},
+			{
+				"name": "Marks",
+				"type": "String"
+			},
+			{
+				"name": "Product_Type",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
